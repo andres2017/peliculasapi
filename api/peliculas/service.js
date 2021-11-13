@@ -8,7 +8,7 @@ async function obtenerPeliculas(){
 async function obtenerPelicula(id){
     let pelicula = await modeloPeliculas.buscarPorId(id);
     /*
-        OPERACIONES ADICIONALES....
+        OPERACIONES ADICIONALES.......
     */
     return pelicula;
 }

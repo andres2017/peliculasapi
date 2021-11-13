@@ -5,7 +5,7 @@ const servicioPeliculas = require('./service');
 /*
     GET -> OBTENER PELÍCULAS - OK 
     GET -> OBTENER PELÍCULA POR - OK 
-    GET -> BUSCAR PELÍCULA POR TÍTULO OK
+    GET -> BUSCAR PELÍCULA POR TÍTULO - OK
     POST -> CREAR PELÍCULAS
     PUT -> ACTUALIZAR PELÍCULAS
     DELETE -> ELIMINAR PELÍCULAS
@@ -23,7 +23,7 @@ controladorPeliculas.get("/obtenerPeliculas", async function(req, res){
 });
 
 /**
- * POR UNA PELÍCULA POR ID
+ * POR UNA PELÍCULA POR ID .
  */
 controladorPeliculas.get("/obtenerPelicula/:id", async function(req, res){
     let id = req.params.id;
@@ -36,8 +36,9 @@ controladorPeliculas.get("/obtenerPelicula/:id", async function(req, res){
 
 
 
+
 /**
- * Obtener películas por el Título
+ * Obtener películas por el Título.
  */
 controladorPeliculas.get("/buscarPeliculasTitulo/:titulo", async function(req, res){
     let titulo = req.params.titulo;

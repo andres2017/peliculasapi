@@ -1,6 +1,7 @@
 const basedatos = require('../../database/connection');
 const objectId = require('mongodb').ObjectId;
 
+
 function buscarTodo(){
     let conexion = basedatos.obtenerConexion();
 
