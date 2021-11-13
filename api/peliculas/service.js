@@ -13,6 +13,7 @@ async function obtenerPelicula(id){
     return pelicula;
 }
 
+
 async function buscarPeliculasTitulo(titulo){
     let peliculas = await modeloPeliculas.buscarPorTitulo(titulo);
     return peliculas;
