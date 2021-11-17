@@ -34,9 +34,6 @@ controladorPeliculas.get("/obtenerPelicula/:id", async function(req, res){
     });
 })
 
-
-
-
 /**
  * Obtener películas por el Título.
  */
@@ -48,6 +45,20 @@ controladorPeliculas.get("/buscarPeliculasTitulo/:titulo", async function(req, r
         "busqueda":titulo,
         "data": peliculas
     });
+})
+
+controladorPeliculas.post("/crearPelicula", async function(req, res){
+    let peliculaNueva = req.body
+    let respuesta = await servicioPeliculas.crearPelicula(peliculaNueva);
+    res.send(respuesta);
+
+});
+
+controladorPeliculas.put("/actualizarPelicula/:id", async function(req, res){
+    let id = req.params.id;
+    let pelicula = req.body;
+    let respuesta = await servicioPeliculas.actualizarPelicula(id, pelicula);
+    res.send(respuesta);
 })
 
 module.exports = controladorPeliculas;
